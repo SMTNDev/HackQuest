@@ -19,13 +19,16 @@ HackQuest is an interactive hacking simulation game built for **Termux**, where 
 ## 📸 Screenshots
 
 ### Game Introduction
-![HackQuest Banner](./assets/screenshots/welcome_screen.png)
+![HackQuest Banner](https://github.com/user-attachments/assets/b4258dcd-066c-446e-bc42-6e5b864d8e10)
+
 
 ### Level 1: Password Retrieval
-![Level 1](./assets/screenshots/level1_screen.png)
+![Level 1](https://github.com/user-attachments/assets/3de5b9c8-5ca2-4521-a7e6-98d16ba897fe)
+
 
 ### Level 3: Log Analysis
-![Level 3](./assets/screenshots/level3_screen.png)
+![Level 3](https://github.com/user-attachments/assets/b79bdedb-2dc6-43d1-af5f-0e393af64951)
+
 
 ---
 
