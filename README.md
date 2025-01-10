@@ -1,6 +1,8 @@
 # HackQuest 🕵️‍♂️💻
 
-[![Version](https://img.shields.io/badge/version-1.0-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/YourUsername/HackQuest) [![📜 License](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=bookstack)](https://github.com/SMTNDev/HackQuest)  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/) [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?style=for-the-badge&logo=git)](#contributing)  [![Platform](https://img.shields.io/badge/Platform-Termux-lightgrey?style=for-the-badge&logo=android&logoColor=white)](https://termux.dev/) [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=for-the-badge&logo=github)](#)
+[![Version](https://img.shields.io/badge/version-1.0-brightgreen?&logo=semantic-release)](https://github.com/YourUsername/HackQuest) [![📜 License](https://img.shields.io/badge/License-Apache-blue?&logo=bookstack)](https://github.com/SMTNDev/HackQuest)  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg?&logo=python)](https://www.python.org/) [![Platform](https://img.shields.io/badge/Platform-Termux-lightgrey?&logo=android&logoColor=white)](https://termux.dev/) [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?&logo=github)](#) [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?&logo=git)](#contributing)
+
+![HackQuest Logo](https://i.ibb.co/QCFhw20/Rich-burgundy-and-deep-blue-modern-flat-design-style-Hack-Quest-logo-simple-two-dimensional-shapes-s.jpg)
 
 **HackQuest** is a terminal-based hacking simulator game designed to test your problem-solving and ethical hacking skills. Solve challenges, crack codes, and advance through increasingly difficult levels in this immersive, text-based environment.
 
