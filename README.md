@@ -1,139 +1,151 @@
-# HackQuest 🔐
-[![Version](https://img.shields.io/badge/version-1.0-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/SMTNDev/HackQuest) [![📜 License](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=bookstack)](https://github.com/SMTNDev/HackQuest) [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?style=for-the-badge&logo=git)](#contributing) [![Platform](https://img.shields.io/badge/Platform-Termux-lightgrey?style=for-the-badge&logo=android&logoColor=white)](https://termux.dev/)
+# HackQuest 🕵️‍♂️💻
 
-### Welcome to HackQuest! 🚀
-HackQuest is an interactive hacking simulation game built for **Termux**, where players solve encryption puzzles, analyze logs, and complete exciting challenges in a simulated hacking environment.  
+[![Version](https://img.shields.io/badge/version-1.0-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/YourUsername/HackQuest) [![📜 License](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=bookstack)](https://github.com/SMTNDev/HackQuest)  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/) [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?style=for-the-badge&logo=git)](#contributing)  [![Platform](https://img.shields.io/badge/Platform-Termux-lightgrey?style=for-the-badge&logo=android&logoColor=white)](https://termux.dev/) [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=for-the-badge&logo=github)](#)
+
+**HackQuest** is a terminal-based hacking simulator game designed to test your problem-solving and ethical hacking skills. Solve challenges, crack codes, and advance through increasingly difficult levels in this immersive, text-based environment.
 
 ---
 
-## 🔥 Features
-- **3 Exciting Levels**:
-  - **Level 1**: Password Retrieval (Caesar cipher decryption).
-  - **Level 2**: File Decryption (Decrypt an encrypted file).
-  - **Level 3**: Log Analysis (Analyze logs to find hidden keywords).
-- Simulated hacking commands (e.g., `scan`, `decrypt`, `connect`).
-- Built with Python, designed for Termux environments.
+## 🎮 Features
+
+- 🚀 **Dynamic Welcome Screen**: Animated ASCII art, hacker-themed quotes, and polished prompts.
+- 🖼️ **Advanced UI Elements**: Rich separators, typewriter effects, and dynamic text animations.
+- 🔓 **Multiple Levels**:
+  - **Level 1**: Password Retrieval.
+  - **Level 2**: File Decryption.
+  - **Level 3**: Log Analysis.
+- 🎲 **Mini-Game**: Integrated 2048 terminal game for fun breaks.
+- 🔐 **Encryption Challenges**: Test your cryptography skills.
+- 🌟 **Dynamic Commands**: Simulated hacking tools like `scan`, `decrypt`, and more.
 
 ---
 
 ## 📸 Screenshots
 
-### Game Introduction
-![HackQuest Banner](https://github.com/user-attachments/assets/b4258dcd-066c-446e-bc42-6e5b864d8e10)
+### **Welcome Screen**
+![Welcome Screen](https://i.ibb.co/tLfkxBh/IMG-20250111-014808.jpg)
 
+### **Interactive Commands**
+![Interactive Commands](https://i.ibb.co/9v3YtGG/IMG-20250111-014838.jpg)
 
-### Level 1: Password Retrieval
-![Level 1](https://github.com/user-attachments/assets/3de5b9c8-5ca2-4521-a7e6-98d16ba897fe)
-
-
-### Level 3: Log Analysis
-![Level 3](https://github.com/user-attachments/assets/b79bdedb-2dc6-43d1-af5f-0e393af64951)
-
+### **Level Challenges**
+![Level Challenges](https://github.com/user-attachments/assets/b79bdedb-2dc6-43d1-af5f-0e393af64951)
 
 ---
 
-## 🚀 Getting Started
-Follow these steps to play **HackQuest** on Termux:
+## 📋 Requirements
 
-### Prerequisites
-1. **Install Termux from [F-Droid](https://f-droid.org/) or [Termux Official Website](https://termux.dev/)**.
+- **Python 3.8+**
+- Unix/Linux or Windows (with `windows-curses`)
+- Rust installed (if using Rust integration features)
 
-2. **Install Python in Termux**:
-   ```bash
-   pkg update && pkg install python3
-   ```
+### Python Dependencies
 
-3. **Clone this repository**:
+All dependencies are listed in `requirements.txt`. Install them using:
 
-   ```bash
-   git clone https://github.com/SMTNDev/HackQuest.git
-   cd HackQuest
-   ```
-
-
-
-## **Installation**
-
-### **Install the dependencies**:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### **Run the Game**
-
-   ```bash
-   python src/main.py
-   ```
-
-
----
-
-## 📂 Folder Structure
-
-```
-HackQuest/
-├── assets/                
-│   ├── banners/           # ASCII art banners
-│   ├── levels/            # Level-specific static data
-│   └── encryption/        # Encrypted files for puzzles
-├── src/
-│   ├── core/              # Core functionality modules
-│   ├── levels/            # Levels logic
-│   └── main.py            # Entry point for the game
-├── config/                # Game configuration
-├── logs/                  # Player action logs
-├── README.md              # Documentation
-└── requirements.txt       # Dependencies
+```bash
+pip install -r requirements.txt
 ```
 
+---
+
+## ⚙️ Setup & Installation
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/SMTNDev/HackQuest.git
+    cd HackQuest
+    ```
+
+2. **Install dependencies**:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run the game**:
+
+    ```bash
+    python3 src/main.py
+    ```
+
+4. **For Windows users**:  
+   Install `windows-curses`:
+
+   ```bash
+   pip install windows-curses
+   ```
 
 ---
 
-## ✨ Contributing
+## 🎯 How to Play
 
-Contributions are welcome!
+1. Launch the game:
+   ```bash
+   python3 src/main.py
+   ```
 
-- Fork the repository.
+2. Use the following commands to navigate the game:
+   - `help` - View all available commands.
+   - `level1`, `level2`, `level3` - Start levels.
+   - `scan`, `decrypt` - Simulate hacking tools.
+   - `exit` - Quit the game.
 
-- Create a new branch.
-
-- Submit a pull request.
-
-
-
----
-
-## 🛡️ License
-
-This project is licensed under the [Apache-2.0](https://github.com/SMTNDev/HackQuest#) License.
-
+3. Complete levels by solving challenges and advancing to the next!
 
 ---
 
-## ☕ Support Me
+## ✨ HackQuest Commands
 
-If you love HackQuest, you can support me to keep creating awesome projects.
+| Command     | Description                         |
+|-------------|-------------------------------------|
+| `help`      | Show the help menu                 |
+| `level1`    | Start Level 1 (Password Retrieval) |
+| `level2`    | Start Level 2 (File Decryption)    |
+| `level3`    | Start Level 3 (Log Analysis)       |
+| `scan`      | Simulate a scanning tool           |
+| `decrypt`   | Simulate decryption process        |
+| `exit`      | Exit the game                      |
+
+---
+
+## 🛠️ Contribution
+
+Contributions are welcome! If you'd like to improve the game, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:  
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit:  
+   ```bash
+   git commit -m "Add feature"
+   ```
+4. Push to your branch:  
+   ```bash
+   git push origin feature-name
+   ```
+5. Submit a pull request.
+
+---
+
+## ❤️ Support
+
+If you like the project, please consider supporting:
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/SMTNDev)
 
+---
 
+## 📝 License
+
+This project is licensed under the [Apache-2.0 License](https://github.com/SMTNDev/HackQuest#).
 
 ---
 
-## 👤 Author
+## 🌟 Acknowledgments
 
-SMTNDev
-
-[GitHub](https://github.com/SMTNDev) | [LinkedIn](https://in.linkedin.com/in/smtndev)
-
-
-
----
-
-## 🔗 Links
-
-Termux: [Official Website](https://termux.dev/en/)
-
-GitHub Repo: [HackQuest](https://github.com/SMTNDev/HackQuest.git)
-
+- Inspired by the spirit of ethical hacking and problem-solving.
+- Thanks to all contributors and supporters of open-source projects!
