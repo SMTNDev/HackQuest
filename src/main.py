@@ -1,5 +1,7 @@
 import sys
 import os
+from time import sleep
+from random import choice
 
 # Add the root directory of the project to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -11,48 +13,132 @@ from src.levels.level2 import level2
 from src.levels.level3 import level3
 
 
+def print_hack_animation():
+    """Display a hacking animation."""
+    os.system("clear")
+    print(f"{COLORS['success']}Initializing HackQuest System...\n{COLORS['reset']}")
+    for i in range(3):
+        for char in "|/-\\":
+            print(f"\r{COLORS['info']}Hacking in progress {char}{COLORS['reset']}", end="", flush=True)
+            sleep(0.2)
+    print(f"\r{COLORS['success']}HackQuest System Ready!{COLORS['reset']}\n")
+
+
+def print_ascii_art():
+    """Display cool ASCII art for the game."""
+    ascii_art = f"""
+{COLORS['warning']} 
+██   ██  █████   ██████ ██   ██  ██████  ██    ██ ███████ ███████ ████████ 
+██   ██ ██   ██ ██      ██  ██  ██    ██ ██    ██ ██      ██         ██    
+███████ ███████ ██      █████   ██    ██ ██    ██ █████   ███████    ██    
+██   ██ ██   ██ ██      ██  ██  ██ ▄▄ ██ ██    ██ ██           ██    ██    
+██   ██ ██   ██  ██████ ██   ██  ██████   ██████  ███████ ███████    ██    
+                                    ▀▀                                     
+                                                                           
+    {COLORS['reset']}
+"""
+    print(ascii_art)
+
+
+def print_separator(style="-", length=60):
+    """Print a stylish separator."""
+    print(f"{COLORS['warning']}{style * length}{COLORS['reset']}")
+
+
+def fancy_print(message, color, delay=0.04):
+    """Print text with a typewriter effect."""
+    for char in message:
+        print(f"{color}{char}{COLORS['reset']}", end="", flush=True)
+        sleep(delay)
+    print()
+
+
+def display_dynamic_quote():
+    """Display a random hacking-related quote."""
+    quotes = [
+        "“Hack the planet!”",
+        "“The quieter you become, the more you are able to hear.”",
+        "“Every great hacker started as a script kiddie.”",
+        "“Code is like humor. When you have to explain it, it’s bad.”",
+    ]
+    fancy_print(choice(quotes), COLORS['info'])
+
+
+def print_welcome_screen():
+    """Display the dynamic welcome screen."""
+    print_hack_animation()
+    print_ascii_art()
+    fancy_print(f"Welcome to {GAME_NAME} - Version {VERSION}", COLORS['success'])
+    print_separator("=")
+    fancy_print(
+        "Embark on an epic journey to become the ultimate hacker! Solve challenges, "
+        "decrypt files, and outsmart the system!", COLORS['warning']
+    )
+    print_separator("=")
+    sleep(1)
+    display_dynamic_quote()
+    print()
+    fancy_print("Type 'help' to view the available commands.", COLORS['info'])
+    print_separator()
+
+
 def display_help():
-    """Display the list of available commands."""
-    print(f"{COLORS['success']}Available Commands:{COLORS['reset']}")
-    print("- help          : Show this help menu")
-    print("- level1        : Start Level 1 (Password Retrieval)")
-    print("- level2        : Start Level 2 (File Decryption)")
-    print("- level3        : Start Level 3 (Log Analysis)")
-    print("- exit          : Exit the game")
-    print("- Other Commands: Simulate hacking tools (e.g., 'scan', 'decrypt')")
+    """Show a polished help menu."""
+    print_separator("=")
+    fancy_print("Available Commands:", COLORS['success'])
+    commands = [
+        {"cmd": "help", "desc": "Show this help menu"},
+        {"cmd": "level1", "desc": "Start Level 1 (Password Retrieval)"},
+        {"cmd": "level2", "desc": "Start Level 2 (File Decryption)"},
+        {"cmd": "level3", "desc": "Start Level 3 (Log Analysis)"},
+        {"cmd": "exit", "desc": "Exit the game"},
+        {"cmd": "scan / decrypt", "desc": "Simulate hacking tools"},
+    ]
+    for command in commands:
+        fancy_print(f"- {command['cmd']:12}: {command['desc']}", COLORS['warning'])
+    print_separator("=")
+
+
+def display_loading(message, duration=2):
+    """Show a loading animation with a custom message."""
+    fancy_print(message, COLORS['info'])
+    for _ in range(duration):
+        print(f"{COLORS['info']}.", end="", flush=True)
+        sleep(0.5)
+    print(f"{COLORS['success']} Done!{COLORS['reset']}")
 
 
 def main():
     """Main game loop."""
-    print(f"{COLORS['success']}{GAME_NAME} - Version {VERSION}{COLORS['reset']}")
-    print("Welcome to the ultimate hacking simulation experience!")
-    print("Type 'help' to see available commands.")
-    trace_level = 0  # Trace level starts at 0
+    print_welcome_screen()
 
     while True:
         try:
-            command = input("\n>> ").strip().lower()
+            command = input(f"{COLORS['success']}HackQuest >> {COLORS['reset']}").strip().lower()
 
             if command == "exit":
-                print("Exiting game. Goodbye!")
+                print(f"{COLORS['success']}Exiting HackQuest. See you next time!{COLORS['reset']}")
+                print_separator()
                 break
             elif command == "help":
                 display_help()
             elif command == "level1":
-                print("Starting Level 1...")
+                display_loading("Loading Level 1...")
                 level1()
             elif command == "level2":
-                print("Starting Level 2...")
+                display_loading("Loading Level 2...")
                 level2()
             elif command == "level3":
-                print("Starting Level 3...")
+                display_loading("Loading Level 3...")
                 level3()
+            elif command in ["scan", "decrypt"]:
+                print(f"{COLORS['success']}Simulating '{command}' command...{COLORS['reset']}")
+                sleep(1)
+                print(f"{COLORS['warning']}Result: Operation completed successfully!{COLORS['reset']}")
             else:
-                # Simulate commands or return invalid command message
-                result = execute_command(command)
-                print(result)
+                print(f"{COLORS['error']}Invalid command! Type 'help' to see available commands.{COLORS['reset']}")
         except KeyboardInterrupt:
-            print("\nExiting game. Goodbye!")
+            print(f"\n{COLORS['warning']}Exiting HackQuest. Goodbye!{COLORS['reset']}")
             break
         except Exception as e:
             print(f"{COLORS['error']}An error occurred: {e}{COLORS['reset']}")
@@ -60,3 +146,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
