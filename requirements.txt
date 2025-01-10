@@ -1,5 +1,9 @@
-rust
-curses
-curses-2048
-rich
-cryptography==39.0.0
+colorama==0.4.6         # Cross-platform ANSI color handling
+termcolor==2.3.0        # Advanced color formatting
+pyfiglet==0.8.post1     # ASCII art generation
+rich==13.5.2            # Advanced rich text formatting and animations
+blessings==1.7          # Terminal string manipulation
+cryptography==39.0.0    # Secure cryptography for advanced encryption challenges
+curses-2048==0.2.0      # Adds interactive 2048 game functionality
+rust==0.0.1             # For Rust integration in Python projects
+curses==2.2.1           # Terminal handling library (Unix-based systems)
