@@ -1,8 +1,15 @@
+import sys
+import os
+
+# Add the root directory of the project to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from config.settings import COLORS, GAME_NAME, VERSION
 from src.core.commands import execute_command
 from src.levels.level1 import level1
 from src.levels.level2 import level2
 from src.levels.level3 import level3
+
 
 def display_help():
     """Display the list of available commands."""
@@ -13,6 +20,7 @@ def display_help():
     print("- level3        : Start Level 3 (Log Analysis)")
     print("- exit          : Exit the game")
     print("- Other Commands: Simulate hacking tools (e.g., 'scan', 'decrypt')")
+
 
 def main():
     """Main game loop."""
@@ -48,6 +56,7 @@ def main():
             break
         except Exception as e:
             print(f"{COLORS['error']}An error occurred: {e}{COLORS['reset']}")
+
 
 if __name__ == "__main__":
     main()
