@@ -1,5 +1,5 @@
 # HackQuest 🔐
-[![Version](https://img.shields.io/badge/version-1.0-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/YourUsername/HackQuest) [![📜 License](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=bookstack)](https://github.com/SMTNDev/HackQuest) [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?style=for-the-badge&logo=git)](#contributing) [![Platform](https://img.shields.io/badge/Platform-Termux-lightgrey?style=for-the-badge&logo=android&logoColor=white)](https://termux.dev/)
+[![Version](https://img.shields.io/badge/version-1.0-brightgreen?style=for-the-badge&logo=semantic-release)](https://github.com/SMTNDev/HackQuest) [![📜 License](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=bookstack)](https://github.com/SMTNDev/HackQuest) [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?style=for-the-badge&logo=git)](#contributing) [![Platform](https://img.shields.io/badge/Platform-Termux-lightgrey?style=for-the-badge&logo=android&logoColor=white)](https://termux.dev/)
 
 ### Welcome to HackQuest! 🚀
 HackQuest is an interactive hacking simulation game built for **Termux**, where players solve encryption puzzles, analyze logs, and complete exciting challenges in a simulated hacking environment.  
