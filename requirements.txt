@@ -1,0 +1,4 @@
+curses
+curses-2048
+rich
+cryptography

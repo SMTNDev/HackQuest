@@ -1,0 +1,6 @@
+[INFO] 2025-01-09 14:05:22: User logged in from 192.168.1.10
+[INFO] 2025-01-09 14:06:45: Accessed /home/admin/secure_docs
+[INFO] 2025-01-09 14:08:12: Suspicious activity detected: Repeated login attempts
+[ERROR] 2025-01-09 14:09:33: ACCESS_DENIED for unauthorized user
+[INFO] 2025-01-09 14:10:00: ACCESS_GRANTED
+[INFO] 2025-01-09 14:12:45: System log analysis completed.
