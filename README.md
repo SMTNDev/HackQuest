@@ -78,6 +78,14 @@ pip install -r requirements.txt
    ```bash
    pip install windows-curses
    ```
+5. **Install HackQuest directly from PyPI**:
+   ```bash
+   pip install HackQuest
+   ```
+6. **Run the game**:
+   ```bash
+   hackquest
+   ```
 
 ---
 
