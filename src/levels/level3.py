@@ -1,35 +1,35 @@
-from src.core.utils import read_file
+import random
+from time import sleep
+from config.settings import COLORS
+from utils.ui import fancy_print
 
 def level3():
-    """
-    Level 3: Log File Analysis
-    The player must analyze a simulated log file and find the hidden keyword.
-    """
-    print("Level 3: Log File Analysis")
-    print("Analyze the log file for suspicious activity or hidden keywords.")
+    fancy_print("Welcome to Level 3: Log Analysis Challenge", COLORS['info'])
+    fancy_print("Objective: Identify the anomaly in the server logs.", COLORS['hint'])
 
-    # Path to the simulated log file
-    log_file_path = "assets/levels/level3_logs.txt"
+    # Generate fake logs and inject an anomaly
+    log_entries = [f"192.168.1.{random.randint(1, 100)} - OK" for _ in range(10)]
+    anomaly_ip = f"10.0.0.{random.randint(1, 100)}"
+    log_entries.insert(random.randint(0, len(log_entries) - 1), f"{anomaly_ip} - MALICIOUS")
 
-    # Read the log file content
-    try:
-        logs = read_file(log_file_path)
-        print("Log File Content:")
-        print(logs)
-    except FileNotFoundError:
-        print("Error: Log file not found!")
-        return False
+    # Display the logs
+    fancy_print("\nServer Logs:", COLORS['info'])
+    for log in log_entries:
+        fancy_print(log, COLORS['log'])
+        sleep(0.5)
 
-    # Prompt the player for the hidden keyword
-    hidden_keyword = "ACCESS_GRANTED"
-    print("\nHint: Look for unusual patterns or repeated sequences in the logs.")
-
-    # Allow the player to guess
-    while True:
-        guess = input("Enter the hidden keyword: ").strip()
-        if guess == hidden_keyword:
-            print("Correct! You've successfully analyzed the logs.")
+    # Prompt user to identify the anomaly
+    attempts = 3
+    while attempts > 0:
+        fancy_print(f"\nAttempts remaining: {attempts}", COLORS['warning'])
+        user_input = input("Which IP address is malicious? ").strip()
+        if user_input == anomaly_ip:
+            fancy_print("Correct! You've identified the anomaly.", COLORS['success'])
             return True
         else:
-            print("Incorrect. Try again!")
+            fancy_print("Incorrect IP address.", COLORS['error'])
+            attempts -= 1
 
+    fancy_print("Game Over! Better luck next time.", COLORS['error'])
+    return False
+    
