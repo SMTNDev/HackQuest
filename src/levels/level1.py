@@ -1,14 +1,32 @@
-from src.core.encryption import caesar_cipher_decrypt
-from src.core.utils import read_file
+import random
+from time import sleep
+from config.settings import COLORS
+from utils.ui import fancy_print
 
 def level1():
-    print("Level 1: Password Retrieval")
-    data = read_file("assets/levels/level1_data.txt")
-    print(data)
+    fancy_print("Welcome to Level 1: Password Retrieval Challenge", COLORS['info'])
+    fancy_print("Objective: Identify the correct password from the hints provided.", COLORS['hint'])
 
-    encrypted_password = "Sdfwlydwh"
-    print("Decrypting password...")
-    password = caesar_cipher_decrypt(encrypted_password, 3)
-    print(f"Decrypted Password: {password}")
+    # Generate a random password and hints
+    password = "".join(random.sample("abcdefghijklmnopqrstuvwxyz1234567890", 8))
+    hint = f"The password contains {len(password)} characters and starts with '{password[0]}' and ends with '{password[-1]}'."
 
-    return password
+    # Display the hint
+    fancy_print("Hint:", COLORS['info'])
+    fancy_print(hint, COLORS['success'])
+
+    # Allow 3 attempts
+    attempts = 3
+    while attempts > 0:
+        fancy_print(f"\nAttempts remaining: {attempts}", COLORS['warning'])
+        user_input = input("Enter the password: ").strip()
+        if user_input == password:
+            fancy_print("Correct! You've unlocked Level 1.", COLORS['success'])
+            return True
+        else:
+            fancy_print("Incorrect password.", COLORS['error'])
+            attempts -= 1
+
+    fancy_print("Game Over! Better luck next time.", COLORS['error'])
+    return False
+    
